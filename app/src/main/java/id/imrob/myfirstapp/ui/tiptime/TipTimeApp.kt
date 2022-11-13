@@ -1,5 +1,6 @@
 package id.imrob.myfirstapp.ui.tiptime
 
+import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -121,7 +122,8 @@ fun RoundTheTipRow(
     }
 }
 
-private fun calculateTip(
+@VisibleForTesting
+internal fun calculateTip(
     amount: Double,
     tipPercent: Double = 15.0,
     roundUp: Boolean
@@ -132,6 +134,7 @@ private fun calculateTip(
     return NumberFormat
         .getCurrencyInstance(Locale("id", "ID")).apply {
             maximumFractionDigits = 2
+            minimumFractionDigits = 2
         }
         .format(tip)
 }

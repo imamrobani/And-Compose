@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import id.imrob.myfirstapp.ui.artspace.ArtSpaceApp
 import id.imrob.myfirstapp.ui.diceroller.DiceRollerApp
 import id.imrob.myfirstapp.ui.lemonade.LemonadeApp
 import id.imrob.myfirstapp.ui.theme.MyFirstAppTheme
@@ -21,7 +22,8 @@ class MainActivity : ComponentActivity() {
         setContent {
 //            DiceRollerApp()
 //            LemonadeApp()
-            TipTimeApp()
+//            TipTimeApp()
+            ArtSpaceApp()
         }
     }
 
